@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<VBox spacing="25" stylesheets="/views/style.css" xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestRecordControllers">
+    <padding>
+
+    <Insets top="80.0" right="83.0" bottom="50.0" left="83.0" />
+    </padding>
+    <ImageView fx:id="logoImageView" fitHeight="41.0" fitWidth="206.0" style="-fx-fit-width: 244; -fx-fit-height: 40;" />
+    <VBox spacing="25">
+        <Label fx:id="titleLabel" text="Medical Records" />
+        <Label fx:id="descriptionLabel" maxWidth="600" text="This table displays the medical record of all the visits you have made to our hospital, the diseases you have been diagnosed with and the test results you have made. You can print out any record of yours!" wrapText="true" />
+    </VBox>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="testNameColumn" prefWidth="100.0" text="Test Name" />
+                <TableColumn fx:id="testResultsColumn" prefWidth="100.0" text="Test Results" />
+                <TableColumn fx:id="testDateColumn" prefWidth="100.0" text="Test Date" />
+                <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="doctorColumn" prefWidth="100.0" text="Doctor" />
+                <TableColumn fx:id="prescriptionColumn" prefWidth="100.0" text="Prescription" />
+            </columns>
+        </TableView>
+
+</VBox>

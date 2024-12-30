@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.updateProfileController">
+   <left>
+      <VBox prefHeight="557.0" prefWidth="79.0" style="-fx-background-color: #FFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="765.0" prefWidth="79.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 5, 0); -fx-background-color: white;">
+               <children>
+                  <Pane prefHeight="800.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fx:id="profileImageView" accessibleRole="BUTTON" fitHeight="22.0" fitWidth="31.0" layoutX="24.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../images/Icon2menu.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="folderIcon" accessibleRole="BUTTON" fitHeight="22.0" fitWidth="31.0" layoutX="25.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../..//images/IconFolderMenu.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="calendarIcon" accessibleRole="BUTTON" fitHeight="22.0" fitWidth="31.0" layoutX="26.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../images/IconCalendarMenu.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="menuImageView" accessibleRole="CHECK_MENU_ITEM" fitHeight="22.0" fitWidth="31.0" layoutX="22.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../images/Iconmenu1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children></VBox>
+   </left>
+   <center>
+      <Pane prefHeight="659.0" prefWidth="1069.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="8.0" layoutY="-1.0" prefHeight="750.0" prefWidth="1070.0" style="-fx-background-color: white;">
+               <children>
+                  <ComboBox fx:id="sexeCombo" cache="true" layoutX="380.0" layoutY="323.0" prefHeight="59.0" prefWidth="297.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-background-color: white;" />
+                  <DatePicker fx:id="dateNaissancePicker" layoutX="46.0" layoutY="320.0" prefHeight="60.0" prefWidth="300.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: black; -fx-border-radius: 6px; -fx-background-color: white;" />
+                  <ComboBox fx:id="villeCombo" layoutX="379.0" layoutY="411.0" prefHeight="59.0" prefWidth="300.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-background-color: white;" />
+                  <ComboBox fx:id="assuranceCombo" layoutX="715.0" layoutY="410.0" prefHeight="59.0" prefWidth="300.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-background-color: white;" />
+                  <Pane layoutX="46.0" layoutY="500.0" prefHeight="65.0" prefWidth="351.0">
+                     <children>
+                        <PasswordField fx:id="passwordInput" layoutY="4.0" prefHeight="59.0" prefWidth="302.0" style="-fx-border-color: #000000; -fx-border-style: solid; -fx-border-radius: 6px; -fx-padding: 20px 35px 20px 20px; -fx-border-width: 1px;" />
+                        <ImageView fitHeight="16.0" fitWidth="19.0" layoutX="270.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/iconPassword.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Text layoutX="196.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change your password here* " />
+               </children>
+            </Pane>
+            <ImageView fitHeight="40.0" fitWidth="231.33" layoutX="25.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="prenomInput" layoutX="54.0" layoutY="229.0" prefHeight="26.0" prefWidth="297.0" promptText="Nom" style="-fx-pref-height: 55px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-padding: 20px 35px 20px 20px;" />
+            <ImageView fitHeight="135.0" fitWidth="129.0" layoutX="470.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/update_profileIcon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="492.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Profile" />
+            <TextField fx:id="nomInput" layoutX="388.0" layoutY="229.0" prefHeight="26.0" prefWidth="297.0" promptText="Nom" style="-fx-pref-height: 55px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-padding: 20px 35px 20px 20px;" />
+            <TextField fx:id="cinInput" layoutX="724.0" layoutY="229.0" prefHeight="26.0" prefWidth="297.0" promptText="Nom" style="-fx-pref-height: 55px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-padding: 20px 35px 20px 20px;" />
+            <Text layoutX="391.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="1.0" />
+            <TextField fx:id="telephoneInput" layoutX="724.0" layoutY="320.0" prefHeight="26.0" prefWidth="297.0" promptText="Nom" style="-fx-pref-height: 55px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-padding: 20px 35px 20px 20px;" />
+            <TextField fx:id="adresseInput" layoutX="54.0" layoutY="411.0" prefHeight="26.0" prefWidth="297.0" promptText="Nom" style="-fx-pref-height: 55px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #000000; -fx-border-radius: 6px; -fx-padding: 20px 35px 20px 20px;" />
+            <Button fx:id="saveUpdateButton" layoutX="336.0" layoutY="617.0" mnemonicParsing="false" onAction="#handleSaveUpdateButton" prefHeight="57.0" prefWidth="412.0" style="-fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15px 20px 15px 20px; -fx-font-family: Poppins; -fx-font-size: 20px; -fx-font-weight: bold; -fx-background-color: #5A9BD5;" text="Save Changes" textFill="WHITE" />
+         </children>
+         
+      </Pane>
+   </center>
+   <bottom>
+      <HBox prefHeight="142.0" prefWidth="1050.0" style="-fx-pref-height: 61px;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="61.0" prefWidth="221.0" style="-fx-background-color: #FFFF;" />
+            <Pane prefHeight="61.0" prefWidth="1211.0" style="-fx-background-color: #81C784B2;">
+               <children>
+                  <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Poppins; -fx-font-weight: 400; -fx-font-size: 14px;" text="Call Our Support  : +212 05290-04477" />
+                  <Text layoutX="381.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Poppins; -fx-font-weight: 400; -fx-font-size: 14px;" text="Adresse  : Ave Mohamed Taieb Naciri, Casablanca 82403 " />
+                  <Text layoutX="869.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Poppins; -fx-font-weight: 400; -fx-font-size: 14px;" text="Open 24 Hours / 7 Days" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
