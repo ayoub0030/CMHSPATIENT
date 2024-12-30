@@ -43,7 +43,12 @@
                 <includes>
                     <include>**/*.fxml</include>
                     <include>**/*.css</include>
-                    <include>images11/**</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>pat</directory>
+                <includes>
+                    <include>images/**</include>
                 </includes>
             </resource>
         </resources>

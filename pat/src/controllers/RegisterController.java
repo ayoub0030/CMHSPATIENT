@@ -42,7 +42,7 @@ public class RegisterController {
     );
 
     public RegisterController() {
-        this.patientDao = new PatientDAOImpl();
+        this.patientDao = new PatientDaoImpl();
     }
 
     @FXML

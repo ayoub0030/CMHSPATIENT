@@ -13,7 +13,7 @@ public class PatientController {
     private Label welcomeLabel;
 
     public PatientController() {
-        this.patientDao = new PatientDAOImpl();
+        this.patientDao = new PatientDaoImpl();
     }
 
     public void setPatient(Patient patient) {

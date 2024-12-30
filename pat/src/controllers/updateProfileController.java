@@ -37,7 +37,7 @@ public class updateProfileController {
     );
 
     public updateProfileController() {
-        this.patientDao = new PatientDAOImpl();
+        this.patientDao = new PatientDaoImpl();
     }
 
     @FXML

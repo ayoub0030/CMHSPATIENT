@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import models.Patient;
+import controllers.PatientDao;
+import controllers.PatientDaoImpl;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -19,7 +21,7 @@ public class LoginController {
     private PatientDao patientDao;
 
     public LoginController() {
-        this.patientDao = new PatientDAOImpl();
+        this.patientDao = new PatientDaoImpl();
     }
 
     @FXML
@@ -56,24 +58,26 @@ public class LoginController {
 
     private void loadUpdateProfilePage(Patient patient) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/updateProfile.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/dashboard.fxml"));
             Parent root = loader.load();
             
             // Get the controller and initialize patient data
-            updateProfileController controller = loader.getController();
-            controller.initData(patient);
+            controllers.switchcontroller controller = loader.getController();
+            if (controller != null) {
+                controller.initData(patient);
+            }
             
             // Create and show the new scene
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Update Profile");
+            stage.setTitle("Dashboard");
             stage.show();
             
             // Close the login window
             ((Stage) cinField.getScene().getWindow()).close();
         } catch (IOException e) {
-            messageLabel.setText("Error loading update profile page");
+            messageLabel.setText("Error loading dashboard: " + e.getMessage());
             messageLabel.setStyle("-fx-text-fill: red;");
             e.printStackTrace();
         }

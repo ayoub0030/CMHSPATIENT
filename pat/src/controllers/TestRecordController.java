@@ -23,7 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class TestRecordControllers {
+public class TestRecordController {
 	@FXML
 	private Label noVisitLabel;
 
@@ -62,9 +62,8 @@ public class TestRecordControllers {
     @FXML
     public void initialize() {
 
-        
-
-         titleLabel.getStyleClass().add("title-label"); // Ajoutez une classe CSS
+        // Ajoutez une classe CSS pour le titre
+        titleLabel.getStyleClass().add("title-label");
 
     	tableView.getStylesheets().add(getClass().getResource("/views/style.css").toExternalForm());
 
@@ -116,8 +115,7 @@ public class TestRecordControllers {
         
     }
 
-
-
+// Ajuster la largeur des colonnes en fonction de la largeur du tableau
     private void adjustColumnWidths() {
         // Appliquer une politique de redimensionnement uniforme
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);

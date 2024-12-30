@@ -16,7 +16,7 @@ public interface PatientDao {
     Patient verifyCredentials(String cin, String password) throws SQLException;
 }
 
-class PatientDAOImpl implements PatientDao {
+class PatientDaoImpl implements PatientDao {
     @Override
     public List<Patient> getAllPatients() throws SQLException {
         List<Patient> patients = new ArrayList<>();

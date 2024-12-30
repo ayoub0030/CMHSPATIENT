@@ -45,7 +45,7 @@
     <!-- Right Section - Image -->
     <VBox alignment="CENTER" prefWidth="400.0" style="-fx-background-color: #f8f9fa;">
         <ImageView fitWidth="400.0" fitHeight="600.0" preserveRatio="false">
-            <Image url="@../images11/doctor.png"/>
+            <Image url="@../images/doctor.png"/>
         </ImageView>
     </VBox>
 

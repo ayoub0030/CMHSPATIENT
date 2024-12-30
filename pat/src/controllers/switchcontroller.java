@@ -8,26 +8,38 @@ import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import models.Patient;
+import javafx.scene.text.Text;
 
 public class switchcontroller {
-
 
     @FXML
     private Button profileButton, folderButton, calendarButton, menuButton, logoutButton;
     
     @FXML
     private StackPane rootPane; 
+    
+    @FXML
+    private Text title;
 
     private Stage stage;
+    private Patient currentPatient;
     
     
     @FXML
     public void initialize() {
-    	profileButton.setOnMouseClicked(event -> handleProfileButtonAction());
+        profileButton.setOnMouseClicked(event -> handleProfileButtonAction());
         folderButton.setOnMouseClicked(event -> handleFolderButtonAction());
         calendarButton.setOnMouseClicked(event -> handleCalendarButtonAction());
         menuButton.setOnMouseClicked(event -> handleHomeButtonAction());
         logoutButton.setOnMouseClicked(event -> handleLogoutButtonAction());
+    }
+
+    public void initData(Patient patient) {
+        this.currentPatient = patient;
+        if (patient != null && title != null) {
+            title.setText("Hello " + patient.getPrenom() + ", welcome back!");
+        }
     }
 
     @FXML
@@ -44,7 +56,7 @@ public class switchcontroller {
     }
     @FXML
     private void handletestButtonAction() {
-    	 switchToScene("test.fxml");
+        switchToScene("test.fxml");
     }
     @FXML
     private void handleHomeButtonAction() {

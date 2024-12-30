@@ -18,7 +18,7 @@
         <!-- Header with Logo -->
         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 20;">
             <ImageView fitHeight="30" preserveRatio="true">
-                <Image url="@../images11/logo.png"/>
+                <Image url="@../images/logo.png"/>
             </ImageView>
         </HBox>
 
@@ -75,7 +75,7 @@
                             </StackPane.margin>
                             <graphic>
                                 <ImageView fitHeight="20" preserveRatio="true">
-                                    <Image url="@../images11/eye.png"/>
+                                    <Image url="@../images/eye.png"/>
                                 </ImageView>
                             </graphic>
                         </Button>
@@ -97,7 +97,7 @@
                             </StackPane.margin>
                             <graphic>
                                 <ImageView fitHeight="20" preserveRatio="true">
-                                    <Image url="@../images11/eye.png"/>
+                                    <Image url="@../images/eye.png"/>
                                 </ImageView>
                             </graphic>
                         </Button>
